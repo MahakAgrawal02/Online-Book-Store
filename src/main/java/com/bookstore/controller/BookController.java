@@ -47,11 +47,12 @@ public class BookController {
      * @param id The ID of the book to be retrieved
      * @return ResponseEntity containing the book if found, or a 404 status if not found
      */
-	/*
-	 * @GetMapping("/{id}") public ResponseEntity<Book> getBookById(@PathVariable
-	 * Long id) { return bookService.getBookById(id) .map(ResponseEntity::ok)
-	 * .orElse(ResponseEntity.notFound().build()); }
-	 */
+    @GetMapping("/{id}")
+    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
+        return bookService.getBookById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 
     /**
      * Endpoint to update an existing book.

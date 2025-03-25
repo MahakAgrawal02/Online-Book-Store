@@ -42,10 +42,9 @@ public class BookService {
      * @param id The ID of the book to retrieve.
      * @return An Optional containing the book if found, otherwise empty.
      */
-	/*
-	 * public Optional<Book> getBookById(Long id) { return
-	 * bookRepository.findById(id); }
-	 */
+    public Optional<Book> getBookById(Long id) {
+        return bookRepository.findById(id);
+    }
 
     /**
      * Updates an existing book by ID.
